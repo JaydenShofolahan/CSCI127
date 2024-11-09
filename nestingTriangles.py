@@ -1,7 +1,7 @@
 #CSci 127 Teaching Staff
-#February 2018
+#November 9th, 2024 
 #A template for a program that draws nested triangles 
-#Modified by:  ADD YOUR NAME HERE
+#Modified by: Jayden Shofolahan 
 
 import turtle
 def setUp(t, dist, col):
@@ -23,12 +23,11 @@ def triangle(t, length):
     and calls triangle(t, length/2).
     """
     
-     ###################################
-     ### FILL IN YOUR CODE HERE      ###
-     ### Other than your name above, ###
-     ### these are the only sections ###
-     ### you change in this program. ###
-     ###################################    
+     if len > 10:
+        for i in range(3):
+          tr.forward(len)
+          tr.left(120)
+        return triangle(tr, len/2)     
 
 
 def nestedTriangle(t, length):
@@ -38,13 +37,12 @@ def nestedTriangle(t, length):
     it repeats 3 times:  moves forward that length, turns 120 degrees, 
     and calls triangle(t, length/2).
     """
-
-     ###################################
-     ### FILL IN YOUR CODE HERE      ###
-     ### Other than your name above, ###
-     ### these are the only sections ###
-     ### you change in this program. ###
-     ###################################       
+    if len > 10:
+        for i in range(3): 
+          tr.forward(len)
+          tr.left(120)
+          return nestedTriangle(tr, len/2) 
+          
 
 
 def main():
